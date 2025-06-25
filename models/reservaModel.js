@@ -21,3 +21,7 @@ exports.createReserva = (reserva, callback) => {
 exports.getReservas = (callback) => {
   db.query('SELECT * FROM reservas', callback);
 };
+
+exports.deleteReservas = (callback) => {
+  db.query('DELETE FROM reservas', callback);
+};

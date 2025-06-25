@@ -15,3 +15,10 @@ exports.listarReservas = (req, res) => {
     res.json(results);
   });
 };
+
+exports.deletarReservas = (req, res) => {
+  reservaModel.deleteReservas((err, results) => {
+    if (err) return res.status(500).json({ erro: err.message });
+    res.json(results);
+  });
+};
